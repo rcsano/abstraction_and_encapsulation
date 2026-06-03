@@ -5,7 +5,7 @@ from fan import Fan
 def print_fan_dashboard(label, fan_obj):
     status = "ON" if fan_obj.is_on() else "OFF"
     speed_names = {1: "SLOW", 2: "MEDIUM", 3: "FAST"}
-    print(f"{label.upper()}\nSTATUS: {status}\nSPEED: {speed_names.get(fan_obj.speed())}")
+    print(f"{label.upper()}\nSTATUS: {status}\nSPEED: {speed_names.get(fan_obj.get_speed())}")
     print(f"RADIUS: {fan_obj.get_radius()}\nCOLOR: {fan_obj.get_color()}\n")
 
 # instantiate two fan objects with distinct values
