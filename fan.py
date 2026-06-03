@@ -7,19 +7,19 @@ class Fan:
 
 # create private attributes for speed, radius, color, and status
     def __init__(self, speed=SLOW, radius=5.0, color="blue", on=False):
-        self.speed = speed
-        self.radius = radius
-        self.color = color
-        self.on = on
+        self.__speed = speed
+        self.__radius = radius
+        self.__color = color
+        self.__on = on
 
 # create getter methods to read values
-        def get_speed(self): return self.speed
-        def get_radius(self): return self.radius
-        def get_color(self): return self.color
-        def is_on(self): return self.on
+        def get_speed(self): return self.__speed
+        def get_radius(self): return self.__radius
+        def get_color(self): return self.__color
+        def is_on(self): return self.__on
 
 # create setter methods to change values
-        def set_speed(self, speed): self.speed = speed
-        def set_radius(self, radius): self.radius = radius
-        def set_color(self, color): self.color = color
-        def set_on(self, on): self.on = on
+        def set_speed(self, speed): self.__speed = speed
+        def set_radius(self, radius): self.__radius = radius
+        def set_color(self, color): self.__color = color
+        def set_on(self, on): self.__on = on
