@@ -1,5 +1,6 @@
 RESET = "\033[0m"
 BOLD = "\033[1m"
+UNDERLINE = "\033[4m"
 YELLOW = "\033[33m"
 BLUE = "\033[34m"
 GREEN = "\033[32m"
@@ -16,12 +17,14 @@ def print_fan_dashboard(label, fan_obj):
 
     speed_names = {1: "SLOW", 2: "MEDIUM", 3: "FAST"}
 
-    print(f"{theme}{BOLD}=== {label.upper()} DASHBOARD ==={RESET}")
-    print(f"{theme}STATUS : {status_text}")
-    print(f"{theme}SPEED  : {WHITE}{speed_names.get(fan_obj.get_speed())}{RESET}")
-    print(f"{theme}RADIUS : {WHITE}{fan_obj.get_radius()} mm{RESET}")
-    print(f"{theme}COLOR  : {WHITE}{fan_obj.get_color().upper()}{RESET}")
-    print(f"{theme}===================================\n")
+    print(f"{theme}┌────────────────────────────────────────┐")
+    print(f"│ ⚙️  {BOLD}{UNDERLINE}{label.upper()} METRICS DASHBOARD{RESET}{theme}     │")
+    print(f"├────────────────────────────────────────┤")
+    print(f"│  ⚡ STATUS : {status_text:<33}{theme}    │")
+    print(f"│  📊 SPEED  : {WHITE}{speed_names.get(fan_obj.get_speed()):<26}{theme}│")
+    print(f"│  📐 RADIUS : {WHITE}{str(fan_obj.get_radius()) + ' mm':<26}{theme}│")
+    print(f"│  🎨 COLOR  : {WHITE}{fan_obj.get_color().upper():<26}{theme}│")
+    print(f"└────────────────────────────────────────┘{RESET}\n")
 
 def main():
     fan_one = Fan(Fan.FAST, 10.0, "yellow", True)
