@@ -29,19 +29,19 @@ def main():
     my_vehicle = Car("2026", "Porsche 911 GT3 RS")
 
     print(f"{WHITE}{BOLD}INITIALIZING VEHICLE OPERATING SYSTEM")
-    time.sleep(0.50)
+    time.sleep(1.0)
 
 # sequence: acceleration (5 iterations)
     print(f"\n{GREEN}EXECUTING ACCELERATION PROTOCOL{RESET}")
     for cycle in range(1, 6):
-        time.sleep(0.20)
+        time.sleep(0.70)
         my_vehicle.accelerate()
         draw_cluster("ACCELERATION PHASE", cycle, my_vehicle, GREEN)
 
 # sequence: decelaration (5 iterations)
     print(f"\n{RED}EXECUTING BRAKING PROTOCOL{RESET}")
     for cycle in range(1, 6):
-        time.sleep(0.20)
+        time.sleep(1.0)
         my_vehicle.decelerate()
         draw_cluster("DECELERATION PHASE", cycle, my_vehicle, RED)
 
