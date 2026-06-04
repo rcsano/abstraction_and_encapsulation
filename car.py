@@ -1,6 +1,6 @@
 # get car details (make, year_model)
 class Car:
-    def __init__(self, make, model, year):
+    def __init__(self, make, model):
         self.__make = make
         self.__year_model = model
         self.__speed = 0
