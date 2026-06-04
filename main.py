@@ -2,7 +2,7 @@
 BOLD = "\033[1m"
 UNDERLINE = "\033[4m"
 CYAN = "\033[36m"
-YELLOW = "\033[33m"
+GREEN = "\033[32m"
 RED = "\033[31m"
 RESET = "\033[0m"
 
@@ -20,7 +20,7 @@ def main():
     print(f"BASELINE VELOCITY: {my_vehicle.get_speed()} KM/H\n")
 
 # sequence: acceleration (5 iterations)
-    print(f"{YELLOW}{BOLD}[PHASE 01]: ACCELERATION SEQUENCE{RESET}")
+    print(f"{GREEN}{BOLD}[PHASE 01]: ACCELERATION SEQUENCE{RESET}")
     print("----------------------------------------------")
     for cycle in range(1, 6):
         time.sleep(0.20)
