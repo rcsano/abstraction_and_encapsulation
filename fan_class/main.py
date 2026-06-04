@@ -27,10 +27,10 @@ def print_fan_dashboard(label, fan_obj):
     print(f"{theme}┌──────────────────────────────────────┐")
     print(f"│{BOLD}{UNDERLINE}{header_title:<38}{RESET}{theme}│")
     print(f"├──────────────────────────────────────┤")
-    print(f"│  ⚡ STATUS : {status_text:<34}{theme} │")
-    print(f"│  📊 SPEED  : {WHITE}{speed_text:<23}{theme} │")
-    print(f"│  📐 RADIUS : {WHITE}{radius_text:<23}{theme} │")
-    print(f"│  🎨 COLOR  : {WHITE}{color_text:<23}{theme} │")
+    print(f"│   STATUS : {status_text:<34}{theme}  │")
+    print(f"│   SPEED  : {WHITE}{speed_text:<23}{theme}   │")
+    print(f"│   RADIUS : {WHITE}{radius_text:<23}{theme}   │")
+    print(f"│   COLOR  : {WHITE}{color_text:<23}{theme}   │")
     print(f"└──────────────────────────────────────┘{RESET}\n")
 
 # instantiate two fan objects with distinct values
