@@ -12,9 +12,9 @@ import time
 def main():
     my_pet = Pet()
 
-    print(f"{BLUE}{BOLD}==============================================")
-    print("         PET REGISTRY PORTAL INITIALIZED")
-    print(f"=============================================={RESET}")
+    print(f"{BLUE}{BOLD}===========================================")
+    print("      PET REGISTRY PORTAL INITIALIZED")
+    print(f"==========================================={RESET}")
 
     name_input = input(" -> Enter pet name: ")
     type_input = input(" -> Enter animal type: ")
